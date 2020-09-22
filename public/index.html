@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>N&B Aps chat</title>
+</head>
+<body>
+    <div id="appContainer" class="flex-column">
+
+        <!-- Header der viser firmanavn -->
+        <header>
+            <div class="container flex-center flex-column">
+                <h1>N&B Aps chat</h1>
+            </div>
+        </header>
+
+        <!-- Hoved indholdet findes i denne container -->
+        <div id="mainContent" class="container flex-grow-1 flex-column">
+
+            <!-- Login boks -->
+            <section id="login">
+                <h2 class="text-center">Get started</h2>
+                <form action="" id="loginForm" class="flex">
+                    <input type="text" name="username" id="username-input"  class="flex-grow-1" placeholder="Enter username..." autocomplete="off" autofocus>
+                    <button id="loginBtn">Chat!</button>
+                </form>
+            </section>
+
+            <!-- Chat boksen -->
+            <section id="chat" class="flex-grow-1 flex-column hidden">
+                <div id="messagesList" class="flex-grow-1">
+                    <!-- Beskeder bliver appendet her igennem JS når nye beskeder oprettes -->
+                </div>
+
+                <!-- Tekst input håndteres her -->
+                <form action="" id="messageForm" class="flex mb-2">
+                    <input type="text" name="message" id="messageInput" class="flex-grow-1" placeholder="Start typing..." autocomplete="off">
+                    <button id="sendBtn">Send</button>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+    <!-- scripts - socket.io cdn - chatapp.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="chatapp.js"></script>
+</body>
+</html>

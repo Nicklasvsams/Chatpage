@@ -1,0 +1,199 @@
+/* Variables */
+:root {
+    --dark-grey: #404040;
+    --light-grey: #828282;
+    --bright-grey: #c2c2c2;
+    --primary-orange: #e39402;
+    --black: #000000;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    color: var(--primary-orange);
+}
+
+/* Helper functions */
+.flex {
+    display: flex;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+.mb-2{
+    margin-bottom: 20px;
+}
+
+.mb-1{
+    margin-bottom: 10px;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Text classes */
+.primary-text{
+    color: var(--primary-orange);
+}
+
+.secondary-text{
+    color: var(--black);
+}
+
+.text-center{
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 300;
+    -webkit-text-stroke: 1px black;
+}
+
+h2{
+    -webkit-text-stroke: 1px black;
+}
+
+/* Header */
+
+header{
+    height: 150px;
+    background-color: var(--light-grey);
+    width: 100%;
+}
+
+header .container{
+    height: 100%;
+    align-items: baseline;
+}
+
+#appContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-grey);
+}
+
+#mainContent{
+    justify-content: center;
+    width: 100%;
+}
+
+/* Login form */
+#login{
+    background: var(--light-grey);
+    padding: 40px 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-top: -100px;
+}
+
+#loginForm{
+    margin-top: 20px;
+}
+
+#username-input{
+    outline:none;
+}
+
+#messageInput{
+    outline:none;
+}
+
+/* Form elements */
+input{
+    height: 40px;
+    padding: 10px;
+    background-color: var(--black);
+    border: none;
+    color: var(--primary-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+button{
+    height: 40px;
+    padding: 0 15px;
+    background-color: var(--primary-orange);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    font-weight: 1000;
+}
+
+/* Chat section */
+#chat {
+    background: var(--light-grey);
+    margin: 25px 0;
+    padding: 25px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    max-height: 75vh;
+}
+
+#message-details{
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.message{
+    background-color: var(--dark-grey);
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.message-right{
+    background-color: var(--bright-grey);
+    color: var(--black);
+    margin-left: 20%;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.message-left{
+    border-radius: 0px 10px 10px 10px;
+}
+
+.message-author{
+    font-weight: 800;
+}
+
+.message-date{
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.message-content{
+    font-weight: 100;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#chat::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#chat {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
